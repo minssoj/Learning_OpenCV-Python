@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+Images/03.hallstatt.jpg
+*.jpg
+*.mp4
+*.png

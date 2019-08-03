@@ -20,7 +20,7 @@ Minso Jeong, Learning about the OpenCV-Python (https://blog.naver.com/samsjang)
 |13. 이미지 Erosion과 Dilation|2019. 08. 04||
 |14. 이미지 Gradient를 이용한 경계 찾기 |2019. 08. 04||
 |15. Canny Edge Detection|2019. 08. 04||
-|16. 이미지 피라미드|2019. 08. 04||
+|16. 이미지 피라미드|2019. 08. 04|과제.이미지블렌딩(사과와 오렌지)|
 |17. 이미지 Contour |||
 |18. 이미지 Contour의 응용 1|||
 |19. 이미지 Contour의 응용 2|||

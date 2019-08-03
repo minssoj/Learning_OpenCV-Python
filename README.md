@@ -16,11 +16,11 @@ Minso Jeong, Learning about the OpenCV-Python (https://blog.naver.com/samsjang)
 |09. 색공간 바꾸기 및 색 추적 |2019. 07. 31||
 |10. 이미지 Thresholding |2019. 08. 01||
 |11. 이미지 변환 - 리사이징, 이동, 회전 원근 효과 |2019. 08. 04| 과제. 이미지 세우기|
-|12. 이미지 필터링 -blur |||
-|13. 이미지 Erosion과 Dilation|||
-|14. 이미지 Gradient를 이용한 경계 찾기 |||
-|15. Canny Edge Detection|||
-|16. 이미지 피라미드|||
+|12. 이미지 필터링 -blur |2019. 08. 04||
+|13. 이미지 Erosion과 Dilation|2019. 08. 04||
+|14. 이미지 Gradient를 이용한 경계 찾기 |2019. 08. 04||
+|15. Canny Edge Detection|2019. 08. 04||
+|16. 이미지 피라미드|2019. 08. 04||
 |17. 이미지 Contour |||
 |18. 이미지 Contour의 응용 1|||
 |19. 이미지 Contour의 응용 2|||
@@ -62,3 +62,6 @@ Minso Jeong, Learning about the OpenCV-Python (https://blog.naver.com/samsjang)
 |55. 머신러닝 기초 2 (kNN 이용하여 손글씨 인식하기)|||
 |56. 머신러닝 기초 3 (오픈소스를 활용한 OCR)|||
 |57. 머신러닝 기초 4 (얼굴검출 - Face Detection)|||
+
+
+## Images

@@ -4,7 +4,7 @@ Minso Jeong, Learning about the OpenCV-Python (https://blog.naver.com/samsjang)
 
 ## Schedule
 |          내용         |   날짜     |   비고   |
-| -------------------------------- |:---------------:|--------------------------:|
+| -------------------------------- |:---------------:|--------------------------|
 |01. OpenCV-Python | 2019. 07. 26 |
 |02. 이미지 Reading과 Writing | 2019. 07. 26 |
 |03. 비디오 Reading과 Writing | 2019. 07. 26 |

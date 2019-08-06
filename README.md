@@ -24,7 +24,7 @@ Minso Jeong, Learning about the OpenCV-Python (https://blog.naver.com/samsjang)
 |17. 이미지 Contour |2019. 08. 04||
 |18. 이미지 Contour의 응용 1|2019. 08. 04||
 |19. 이미지 Contour의 응용 2|2019. 08. 04||
-|20. 이미지 Contour의 응용 3|||
+|20. 이미지 Contour의 응용 3|2019. 08. 06| Extreme Points |
 |21. 이미지 Contour의 응용 4|||
 |22. 이미지 Contour의 응용 5|||
 |23. 이미지 히스토그램 이해하기|||

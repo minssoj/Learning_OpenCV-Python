@@ -27,3 +27,52 @@ import matplotlib.pyplot as plt
 # mean_value = cv2.mean(img, mask=mask)
 # ================================================================
 
+# A. Image Features
+def convex():
+	img = cv.imread('../Images/22.korea.jpg')
+	gray_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+	ret, thr = cv.threshold(gray_img, 127, 255, 0)
+	_, contours, _ = cv.findContours(thr, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+
+	cnt = contours[30]
+
+	mmt = cv.moments(cnt)
+	cx = int(mmt['m10']/mmt['m00'])
+	cy = int(mmt['m01']/mmt['m00'])
+
+	x, y, w, h = cv.boundingRect(cnt)
+	korea_rect_area = w*h
+	korea_area = cv.contourArea(cnt)
+	hull = cv.convexHull(cnt)
+	hull_area = cv.contourArea(hull)
+	ellipse = cv.fitEllipse(cnt)
+
+	aspect_ratio = w/h
+	extent = korea_area/korea_rect_area
+	solidity = korea_area/hull_area
+
+	print("KOREA aspect_ratio :\t%.3f" %aspect_ratio)
+	print("KOREA Extent :\t%.3f" %extent)
+	print("KOREA Solidity :\t%.3f" %solidity)
+	print("KOREA Orientation : :\t%.3f" %ellipse[2])
+
+	equivalent_diameter = np.sqrt(4*korea_area/np.pi)
+	korea_radius = int(equivalent_diameter/2)
+
+	cv.circle(img, (cx, cy), 3, (0, 0, 255), -1)
+	cv.circle(img, (cx, cy), korea_radius, (0, 0, 255), 2)
+	cv.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
+	cv.ellipse(img, ellipse, (50, 50, 50), 2)
+
+	cv.imshow('KOREA Features', img)
+	cv.waitKey(0)
+	cv.destroyAllWindows()
+#convex()
+
+# B: Extreme Points
+# =====================* arrangement *============================
+# leftmost = tuple(cnt[cnt[:,:,0].argmin()][0])
+# rightmost = tuple(cnt[cnt[:,:,0].argmax()][0])
+# topmost = tuple(cnt[cnt[:,:,1].argmin()][0])
+# bottommost = tuple(cnt[cnt[:,:,1].argmax()][0])
+# ================================================================

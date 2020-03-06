@@ -26,8 +26,10 @@ def templateMatching():
 		except:
 			print('error', i)
 			continue
+		# 최솟값이 원하는 값인 Method
 		if method in [cv.TM_SQDIFF, cv.TM_SQDIFF_NORMED]:
 			top_left = min_loc
+		# 최대값이 원하는 값인 Method
 		else:
 			top_left = max_loc
 		bottom_right = (top_left[0]+w, top_left[1]+h)

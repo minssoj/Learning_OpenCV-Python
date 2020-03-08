@@ -22,11 +22,13 @@ def watershed():
 	border = cv.dilate(opening, kernel, iterations=3)
 	border = border - cv.erode(border, None)
 
-	# 
+	# 이미지의 각 픽셀과 가장 가까운 0인 픽셀과의 거리를 계산
 	dt = cv.distanceTransform(opening, cv.DIST_L2, 5)
 	dt = ((dt-dt.min()) / (dt.max()-dt.min())*255).astype(np.uint8)
+	# 동전인 것이 확신할 수 있는 부분을 마커로 표시
 	ret, dt = cv.threshold(dt, 180, 255, cv.THRESH_BINARY)
 
+	# 8방향 검사를 통해 이어져 있는 부분을 동일한 라벨 붙여 , 객체 구분
 	marker, ncc = label(dt)
 	marker = marker * (255/ncc)
 
@@ -34,10 +36,12 @@ def watershed():
 	marker = marker.astype(np.int32)
 	cv.watershed(img, marker)
 
+	# 경계 부분을 0으로 표시
 	marker[marker == -1] = 0
 	marker = marker.astype(np.int8)
 	marker = 255 - marker
 
+	# 흰색이 아닌 부분을 검정색으로 처리
 	marker[marker != 255] = 0
 	marker = cv.dilate(marker, None)
 	img[marker == 255] = (0, 0, 255)
